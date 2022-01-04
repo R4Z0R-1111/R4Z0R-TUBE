@@ -2,9 +2,9 @@
 
 ### This is my biggest release so far, I've been working on this Youtube Downloader for quite a while now, learning a lot along the way, and some libraries from others I've used! Among other things, my program uses the following things!
 
-https://github.com/Tyrrrz/YoutubeExplode
-https://github.com/Tyrrrz/YoutubeDownloader
-https://www.ffmpeg.org/download.html
+- https://github.com/Tyrrrz/YoutubeExplode
+- https://github.com/Tyrrrz/YoutubeDownloader
+- https://www.ffmpeg.org/download.html
 
 ## How To Use
 
