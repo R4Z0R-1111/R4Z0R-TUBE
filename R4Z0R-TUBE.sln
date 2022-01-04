@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R4Z0R-TUBE", "R4Z0R-TUBE.csproj", "{D240555F-71C7-4F32-AB66-48B940BA6607}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "R4Z0R-TUBE-SETUP-1", "..\R4Z0R-TUBE-SETUP-1\R4Z0R-TUBE-SETUP-1.vdproj", "{A0D8E2C8-3AB8-433B-BC92-152BB805056C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,9 @@ Global
 		{D240555F-71C7-4F32-AB66-48B940BA6607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D240555F-71C7-4F32-AB66-48B940BA6607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D240555F-71C7-4F32-AB66-48B940BA6607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D8E2C8-3AB8-433B-BC92-152BB805056C}.Debug|Any CPU.ActiveCfg = Debug
+		{A0D8E2C8-3AB8-433B-BC92-152BB805056C}.Release|Any CPU.ActiveCfg = Release
+		{A0D8E2C8-3AB8-433B-BC92-152BB805056C}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

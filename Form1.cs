@@ -6,11 +6,14 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YoutubeExplode;
 using YoutubeExplode.Common;
 using YoutubeExplode.Converter;
+using FFmpeg;
+using FFMpegCore;
 
 namespace R4Z0R_TUBE
 {
@@ -72,7 +75,7 @@ namespace R4Z0R_TUBE
                 label4.Text = Convert.ToString(percentage2) + " / " + "100%";
                 label5.Text = "Video: 1 / 1";
             });
-            await youtube.Videos.DownloadAsync(videoLink,savePath+"\\"+videoName+ending,progress);
+            await youtube.Videos.DownloadAsync(videoLink,savePath+"\\"+ Regex.Replace(videoName, @"[^a-zA-Z0-9\-]", "") + ending,progress);
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
@@ -96,7 +99,7 @@ namespace R4Z0R_TUBE
                     label4.Text = Convert.ToString(percentage2) + " / " + "100%";
                     label5.Text = "Video: " +alreadyloaded.ToString()+ " / " +videos.Count;
                 });
-                await youtube2.Videos.DownloadAsync(linkdw, savePath + "\\" + videoName + ending, progress);
+                await youtube2.Videos.DownloadAsync(linkdw, savePath + "\\" + Regex.Replace(videoName, @"[^a-zA-Z0-9\-]", "") + ending, progress);
             }
         }
     }
