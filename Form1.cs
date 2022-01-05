@@ -12,8 +12,11 @@ using System.Windows.Forms;
 using YoutubeExplode;
 using YoutubeExplode.Common;
 using YoutubeExplode.Converter;
+using YoutubeExplode.Videos.Streams;
 using FFmpeg;
 using FFMpegCore;
+using System.Net;
+using System.Diagnostics;
 
 namespace R4Z0R_TUBE
 {
@@ -32,6 +35,8 @@ namespace R4Z0R_TUBE
         string savePath = "";
         string ending = ".mp3";
         int alreadyloaded = 0;
+        string videoTime = "";
+        string videoThumbnail = "";
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -67,6 +72,15 @@ namespace R4Z0R_TUBE
             var youtube = new YoutubeClient();
             var video = await youtube.Videos.GetAsync(videoLink);
             videoName = video.Title;
+            videoLink = video.Url;
+            videoTime = video.Duration.ToString();
+            videoThumbnail = video.Thumbnails.Where(t => t.Url.EndsWith(".jpg")).GetWithHighestResolution().Url;
+            Debug.Write("URL: "+videoThumbnail);
+            pictureBox1.ImageLocation = videoThumbnail;
+            
+            label6.Text = videoName;
+            label7.Text = videoLink;
+            label8.Text = videoTime;
             var progress = new Progress<double>(p =>
             {
                 progressBar1.Value = Convert.ToInt32(p * 100);
@@ -89,6 +103,15 @@ namespace R4Z0R_TUBE
             var videos = await youtube2.Playlists.GetVideosAsync(playlistLink);
             foreach (var video in videos) {
                 videoName = video.Title;
+                videoLink = video.Url;
+                videoTime = video.Duration.ToString();
+                videoThumbnail = video.Thumbnails.Where(t => t.Url.EndsWith(".jpg")).GetWithHighestResolution().Url;
+                Debug.Write("URL: " + videoThumbnail);
+                pictureBox1.ImageLocation = videoThumbnail;
+
+                label6.Text = videoName;
+                label7.Text = videoLink;
+                label8.Text = videoTime;
                 alreadyloaded = alreadyloaded+1;
                 string linkdw = video.Url;
                 var progress = new Progress<double>(p =>
