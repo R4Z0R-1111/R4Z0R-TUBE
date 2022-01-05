@@ -31,6 +31,6 @@ Coming Soon:
 
 ## Screenshot
 
-![screenshot](https://i.ibb.co/HFgyks8/version2.png)
+![screenshot](https://i.ibb.co/rwLQP71/version2.png)
 
 ### If you need help, or you want to reach out to me, contact me on Discord: R4Z0R#1111
