@@ -21,6 +21,7 @@ Currently you can do the following things with this tool:
 - [x] Download Single Videos as MP3 Files!
 - [x] Download whole Playlists and Queue them as MP3 Files! 
 - [x] Progress Bar that shows you how many Videos you have downloaded and the current %!
+- [x] Added Video Information while Downloading (Including: Thumbnail, Name, Duration) 
 
 Coming Soon:
 
