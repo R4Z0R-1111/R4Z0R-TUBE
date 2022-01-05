@@ -6,6 +6,8 @@
 - https://github.com/Tyrrrz/YoutubeDownloader
 - https://www.ffmpeg.org/download.html
 
+### Please take a look at them!
+
 ## How To Use
 
 Download the Release .rar file, and put it wherever you want. Just unpack it, and go into the the /DEBUG or the /RELEASE Folder, and start the
